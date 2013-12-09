@@ -1,6 +1,15 @@
 == README
+1. You need to have Redis working 
+2. 
+Just run 
+```
+bundle install
+```
+4. 
+```
+rails s
+```
+3. go to http://localhost:3000
 
-Demo requires you to have Redis running
-then just run 
-``` bundle install ```
+
 
