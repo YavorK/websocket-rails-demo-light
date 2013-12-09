@@ -1,0 +1,29 @@
+<div id="my_chat_log" style="height: 250px;  overflow: auto"></div>
+<input type="text" id="message_box" size="50" />
+<button id="send_message">Send</button>
+<script type="text/javascript">
+    var dispatcher;
+    $(document).ready(function() {
+        <% if Rails.env.development? %>
+        var ws_host = 'ws://localhost:3000/websocket';
+        <% else %>
+        var ws_host = 'wss://your-domain-here.com/websocket';
+        <% end %>
+
+        dispatcher = new WebSocketRails(ws_host);
+
+        dispatcher.on_open = function() {
+            var channel = dispatcher.subscribe("my_channel_name");
+            channel.bind('my_event_name', function(data) {
+                console.log(data);
+                $("#my_chat_log").append(data.message + "<br />")
+                .scrollTop($('#my_chat_log').prop("scrollHeight"));
+            });
+        };
+
+        $('#send_message').on('click', function () {
+            console.log('sending message: "'+$("#message_box").val()+'"');
+            dispatcher.trigger('my_event_name', { message: $("#message_box").val() });
+        });
+    });
+</script>
