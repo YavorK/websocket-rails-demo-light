@@ -8,4 +8,8 @@ How to install
 
 How it works
 -------------------------
-![alt tag](https://f.cloud.github.com/assets/4265225/1708628/d9301df4-6111-11e3-95e1-b58646d12a97.png)
+![alt tag](https://f.cloud.github.com/assets/4265225/1708628/d9301df4-6111-11e3-95e1-b58646d12a97.png)4
+
+P.S.
+-------------------------
+Thanks to [moaa](https://github.com/moaa/) for the guidance!
