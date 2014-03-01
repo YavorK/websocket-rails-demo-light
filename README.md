@@ -12,7 +12,7 @@ How it works
 
 Screenshot chatting between Chrome and Firefox on localhost, no refresh, no AJAX; pure websockets
 
-http://s9.postimg.org/up7tmtasf/screenshot_139.png
+![alt tag](http://s9.postimg.org/up7tmtasf/screenshot_139.png)
 
 P.S.
 -------------------------
